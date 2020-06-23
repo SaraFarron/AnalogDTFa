@@ -6,9 +6,9 @@ def index(request):
     return render(request, 'Test/homePage.html')
 
 def contact(request):
-    return render(request, 'Test/basic.html', 
-    {'values': ["If you have any questions, please call me", 
+    return render(request, 'Test/basic.html',
+    {'values': ["If you have any questions, please call me",
     "89233692277"]})
 
 def experiments(request):
-    return render(request, 'experiments/templates/experiments/experiment.css')
+    return render(request, 'experiments/templates/experiments/experiment.html')

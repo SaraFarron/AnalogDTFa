@@ -8,26 +8,26 @@ class Articles(models.Model):
     date=models.DateField()
     post_rating=0
     amount_of_comments=0
-    # slug = models.SlugField(max_length=100, db_index=True)
     def __str__(self):
         return self.title
-
-def upvote():
-    post_rating=+1
-
-def downvote():
-    post_rating=-1
-
-def add_comment():
-    comments_number=+1
 
 class comment(models.Model):
     # Owner=username
     comment_rating=0
     text=models.TextField()
+    # get_rating():
+    #     return comment_rating
 
 class User(models.Model):
-    Username="Enter your name"
-    Karma=0
+    username="Enter your name"
+    karma=0
     password="Enter your password"
     email="Enter your email"
+    # set_password(pass):
+    #     password=pass
+    # get_karma():
+    #     return karma
+    # set_email(mail):
+    #     email=mail
+    # set_username(name):
+    #     username=name
