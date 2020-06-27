@@ -11,4 +11,4 @@ def contact(request):
     "89233692277"]})
 
 def experiments(request):
-    return render(request, 'experiments/templates/experiments/experiment.html')
+    return render(request, 'experiments/experiment.html')
