@@ -9,16 +9,30 @@
 <p>{{articles.post|safe|linebreaks}}</p>
 <h6>{{articles.amount_of_comments}}</h6>
 <h6>{{articles.post_rating}}</h6>
-<!-- <a href="/" class="btn btn-success btn-lg">main page</a> -->
-<button type="button", onclick="upvote()">Upvote</button>
-<button type="button", onclick="downvote()">Downvote</button>
-<h3>Comment section</h3>
-<h4>Корованны</h4>
-
+<button type="button", class="btn btn-success", onclick="upvote()">Upvote</button>
+<button type="button", class="btn btn-danger", onclick="downvote()">Downvote</button>
+<h3 style="margin-bottom: 30px; margin-top: 30px;">Comment section</h3>
+<button type="button", class="btn btn-dark", onclick="showImage()">Добавить корованн</button>
+<button type="button", class="btn btn-dark", onclick="LootImage()">Разграбить корованн</button>
+<div id="cow", class="container", style="margin-top: 30px;">
+</div>
+<script>
+    function upvote(){
+        placeholder
+    }
+    function downvote(){
+        placeholder
+    }
+    function showImage() {
+        var cow = document.createElement("IMG")
+        document.getElementById("cow").appendChild(cow)
+        cow.src = "/static/korovann.png"
+    }
+    function LootImage(){
+        var cow = document.getElementsByTagName("IMG")
+        document.removeChild(cow)
+    }
+</script>
 <!-- kommenti -->
 
-<!-- {% include 'Test/includes/some.html' %} -->
-
 {% endblock %}
-
-<!-- at H:i:s -->
