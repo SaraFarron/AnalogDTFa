@@ -6,10 +6,15 @@ class Articles(models.Model):
     title=models.CharField(max_length=120)
     post=models.TextField()
     date=models.DateField()
-    post_rating=0
-    amount_of_comments=0
+    post_rating=models.IntegerField(default=10)
+    amount_of_comments=models.IntegerField(default=0)
     def __str__(self):
         return self.title
+    # @classmethod
+    def upvote(self):
+        Articles.post_rating+=1
+    def downvote(self):
+        Articles.post_rating-=1
 
 class comment(models.Model):
     # Owner=username

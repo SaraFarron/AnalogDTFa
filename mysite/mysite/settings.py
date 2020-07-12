@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'experiments',
-    'profilepage',
+    'profile',
     'news',
     'Test',
     'django.contrib.admin',

@@ -1,0 +1,58 @@
+{% extends "Test/wrapper.html" %}
+
+{% block content %}
+{% load static %}
+<style>
+    img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+    }
+    #ava{
+        position: relative;
+        width: 250px;
+    }
+    .image{
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        right: 10%;
+    }
+    .middle{
+        text-align: center;
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+    #ava:hover .image{
+        opacity: 0.3;
+    }
+    #ava:hover .middle{
+        opacity: 1;
+    }
+    #text{
+        color: white;
+        font-size: 16px;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    label{
+        cursor: pointer;
+    }
+</style>
+<div class="container", id="ava">
+    <img src="{% static 'UserAvatar.png' %}" class="image">
+    <div class="middle">
+        <label for="text">Change pic</label>
+        <input id="text" type="file">
+    </div>
+</div>
+<h3>{{UserName}} Placeholder 4 UN</h3>
+
+{% endblock %}

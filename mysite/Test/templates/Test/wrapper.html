@@ -16,37 +16,50 @@
         font-family: "Lucida Console"
       }
       div {
-        margin-bottom: 15px;
+        margin: 10px 10px 10px 10px;
         opacity: 1;
       }
-      /* style="background-image:
-  url({% static '/Test/image/Amiya.full.2972179.jpg' %}) */
+      #outside {
+        position: relative;
+      }
+      #rightbar{
+        position: fixed;
+        right: 5%;
+      }
+      #leftbar{
+        position: fixed;
+        right: 87%;
+      }
     </style>
     <body>
-      <div class="container", style="background-color: rgb(28,58,28);
-      border-radius: 15px; width: 75%; padding-bottom: 30px; padding-top: 30px">
-        <h1 style="text-align: center;">AnalogDTFa</h1>
+      <div class="container", id="outside" style="padding: 0px 0px 0px 0px; border: 0px 0px 0px 0px;">
+        <a href="/profile" class="btn btn-primary btn-lg", id="rightbar">Profile</a>
+        <a href="/news" class="btn btn-primary btn-lg", id="leftbar">News</a>
+        <div class="container", style="background-color: rgb(28,58,28);
+        border-radius: 15px; width: 75%; padding-bottom: 30px; padding-top: 30px">
+          <h1 style="text-align: center;">AnalogDTFa</h1>
+        </div>
+          <div class="container", style="background-color: rgb(28,28,58);
+          border-radius: 15px; width: 75%; padding: 10px 10px 10px 10px">
+              <P>
+                  {% block content %}
+                  {% endblock %}
+              </P>
+              <br> <br> <br>
+              <P>
+                  <a href="/" class="btn btn-success btn-lg">main page</a>
+                  <a href="/news" class="btn btn-primary btn-lg">news
+                  &raquo;</a>
+                  <a href="/contact" class="btn btn-info btn-lg">contact
+                  &raquo;</a>
+              </P>
+          </div>
+          <div class="container", style="background-color: rgb(58,28,28);
+          border-radius: 15px; width: 75%;">
+              <h2>Temprorary text</h2>
+              <p>Also temp</p>
+              <a href="/experiments" class="btn btn-primary">experiments</a>
+          </div>
       </div>
-        <div class="container", style="background-color: rgb(28,28,58);
-        border-radius: 15px; width: 75%; padding: 10px 10px 10px 10px">
-            <P>
-                {% block content %}
-                {% endblock %}
-            </P>
-            <br> <br> <br>
-            <P>
-                <a href="/" class="btn btn-success btn-lg">main page</a>
-                <a href="/news" class="btn btn-primary btn-lg">news
-                &raquo;</a>
-                <a href="/contact" class="btn btn-info btn-lg">contact
-                &raquo;</a>
-            </P>
-        </div>
-        <div class="container", style="background-color: rgb(58,28,28);
-        border-radius: 15px; width: 75%;">
-            <h2>Temprorary text</h2>
-            <p>Also temp</p>
-            <a href="/experiments" class="btn btn-primary">experiments</a>
-        </div>
     </body>
 </html>
