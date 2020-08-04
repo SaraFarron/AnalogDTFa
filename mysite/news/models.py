@@ -23,16 +23,3 @@ class comment(models.Model):
     # get_rating():
     #     return comment_rating
 
-class User(models.Model):
-    username="Enter your name"
-    karma=0
-    password="Enter your password"
-    email="Enter your email"
-    # set_password(pass):
-    #     password=pass
-    # get_karma():
-    #     return karma
-    # set_email(mail):
-    #     email=mail
-    # set_username(name):
-    #     username=name

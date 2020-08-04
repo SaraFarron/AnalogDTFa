@@ -22,21 +22,28 @@
       #outside {
         position: relative;
       }
-      #rightbar{
-        position: fixed;
-        right: 5%;
+      .left{
+        width: 15%;
       }
-      #leftbar{
-        position: fixed;
-        right: 87%;
+      .center{
+        width: 65%;
+      }
+      .right{
+        width: 15%;
       }
     </style>
     <body>
-      <div class="container", id="outside" style="padding: 0px 0px 0px 0px; border: 0px 0px 0px 0px;">
-        <a href="/profile" class="btn btn-primary btn-lg", id="rightbar">Profile</a>
-        <a href="/news" class="btn btn-primary btn-lg", id="leftbar">News</a>
-        <div class="container", style="background-color: rgb(28,58,28);
-        border-radius: 15px; width: 75%; padding-bottom: 30px; padding-top: 30px">
+      <div class="row">
+        <div class="column left">
+          <a href="/news" class="btn btn-primary btn-lg", id="leftbar">News</a>
+          <a href="/placeholder", class="btn btn-primary btn-lg", id="leftbar">placeholder</a>
+          <a href="/placeholder2", class="btn btn-primary btn-lg", id="leftbar">placeholder2</a>
+          <a href="/placeholder3", class="btn btn-primary btn-lg", id="leftbar">placeholder3</a>
+          <a href="/placeholder4", class="btn btn-primary btn-lg", id="leftbar">placeholder4</a>
+        </div>
+        <div class="column center">
+          <div class="container", style="background-color: rgb(28,58,28);
+        border-radius: 15px; width: 75%; padding-bottom: 30px; padding-top: 30px; margin: 10 0 10 0">
           <h1 style="text-align: center;">AnalogDTFa</h1>
         </div>
           <div class="container", style="background-color: rgb(28,28,58);
@@ -60,6 +67,14 @@
               <p>Also temp</p>
               <a href="/experiments" class="btn btn-primary">experiments</a>
           </div>
+        </div>
+        <div class="column right">
+          <a href="/profile" class="btn btn-primary btn-lg", id="rightbar">Profile</a>
+          <a href="/placeholder5", class="btn btn-primary btn-lg", id="righttbar">placeholder5</a>
+          <a href="/placeholder6", class="btn btn-primary btn-lg", id="righttbar">placeholder6</a>
+          <a href="/placeholder7", class="btn btn-primary btn-lg", id="righttbar">placeholder7</a>
+          <a href="/placeholder8", class="btn btn-primary btn-lg", id="righttbar">placeholder8</a>
+        </div>
       </div>
     </body>
 </html>
