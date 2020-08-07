@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'profile',
     'news',
     'Test',
+    'polls',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
